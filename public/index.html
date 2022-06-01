@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StudBud</title>
-    <link rel="stylesheet" href="styles/styles.scss" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="styles/styles.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-    <!--taske name -->
-    <form id="taskform">
+  <div id="menu"></div>
+  <button id = "myBtn">+</button>
+  <center><div id="cent">
+      <form id="taskform">
         <!--taske name -->
         <label for="task">Task:</label>
         <input type="text" name="task" id="taskInput">
@@ -20,14 +23,18 @@
         <br>
         <!--weight input -->
         <label for="weight">Weight:</label>
-        <input type="weight" name="weight" id="weightInput">
+        <input type="number" name="weight" id="weightInput">
         <br>
         <!--time input -->
         <label for="completionTime">Estimated Completion Time:</label>
         <input type="time" name="completionTime" id="completionTime">
         <br>
-       
+        <button type = "submit" id = "submitBtn">Submit</button>
     </form>
-    
+   </div></center>
+   <div id="taskList">
+    </div>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
