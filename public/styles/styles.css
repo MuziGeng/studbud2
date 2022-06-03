@@ -3,16 +3,24 @@
     font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    background: #f0f4ff
+
   }
-  #menu{
+  body{
+    height: 100vh;
+    display: flex;
+    background: #f0f4ff;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu{
     background: #1e2b58;
     position:fixed;
-    width: 10vw;
+    width: 5vw;
     height: 100vh;
     left: 0px;
     z-index: 10;
-  }
+}
   /*button of input 
   make it looks like a plus button*/
   #myBtn{
@@ -110,7 +118,10 @@
   }
 /*Adaptation when screen on phone*/
 @media  (max-width: 450px) {
-    li{
+  #menu{
+    width: 15vw;
+  }  
+  li{
       width: 70%;
     }
   }

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+  <link href="styles/music.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!--the menu part-->
+<div id="menu">
+    <div class="title">
+    <center><a href="index.html"><img src="img/logo.png"  width="100%"></a>
+    <a href="index.html"><img src="img/task.png"  width="100%"></a>
+    <a href="clock.html"><img src="img/time.png"  width="100%"></a>
+    <a href="music.html"><img src="img/music.png"  width="100%"></a></center>
+  </div>
+  </div>
+
+  <div class="frameBox">
+    <div class="player">
+        <div class="playerTrack">
+            <div class="musicName">红模仿</div>
+            <div class="otherName">周杰伦 - 红模仿</div>
+            <div class="trackTime">
+                <div class="current-time"></div>
+                <div class="total-time"></div>
+            </div>
+            <div class="progressBox">
+                <div class="hoverTime"></div>
+                <div class="hoverBar"></div>
+                <div class="progressedBar"></div>
+            </div>
+        </div>
+        <div class="playerCase">
+            <div class="albumCover">
+                <img src="music/红模仿.PNG" alt="" class="active">
+                <img src="music/夜曲.PNG" alt="">
+
+            </div>
+            <div class="playControls">
+                <div class="control">
+                    <div class="button play-prev"><img src="img/prev.png"width="100%">
+                        <i class="fa fa-step-backward"></i>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="button play-pause"><img src="img/play.png"width="100%">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <div class="control">
+                    <div class="button play-next"><img src="img/next.png"width="100%">
+                        <i class="fa fa-step-forward"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+  <script src="js/music.js"></script>
+</body>
+
+</html>

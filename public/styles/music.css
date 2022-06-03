@@ -1,0 +1,231 @@
+*{
+    /* 初始化 */
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* 100%窗口高度 */
+    height: 100vh;
+    /* 弹性布局 居中显示 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu{
+    background: #1e2b58;
+    position:fixed;
+    width: 10vw;
+    height: 100vh;
+    left: 0px;
+    z-index: 5;
+  }
+/*the box size*/
+.frameBox{
+    width: 430px;
+    height: 100px;
+}
+/*all showing part*/
+.player{
+    position: relative;
+    height: 100%;
+    z-index: 3;
+}
+/* the track area */
+.playerTrack{
+  /*the absolute position*/
+    position: absolute;
+    top: 0;
+    right: 15px;
+    bottom: 0;
+    left: 15px;
+    padding: 13px 22px 10px 184px;
+    /* make the active looks smooth */
+    transition: top 0.5s ease;
+}
+/* the action when playerTrack active */
+.playerTrack.active{
+    /* up 100px */
+    top: -100px;
+}
+/*the music name looks*/
+.musicName{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 1000;
+}
+/*the others looks*/
+.otherName{
+    color: #7a7a7a;
+    font-size: 10px;
+    margin-top: 5px;
+}
+/*the timeline of track looks*/
+.trackTime{
+    height: 12px;
+    line-height: 12px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+/*the timeline of track looks*/
+.current-time,.total-time{
+    color: #be3200;
+    font-size: 12px;
+    transition: 0.5s ease;
+}
+/*current on left total on right*/
+.current-time{
+    float: left;
+}
+.total-time{
+    float: right;
+}
+/* progress box */
+.progressBox{
+    position: relative;
+    height: 4px;
+    background: #baaba6;
+    border-radius: 10%;
+    cursor: pointer;
+}
+/* the time showing when mouse hover the time */
+.hoverTime{
+    position: absolute;
+    top: -30px;
+    color: white;
+  /*make it can see the obj under the hover time*/
+    background: rgba(0,0,0,0.8);
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 20%;
+    display: none;
+}
+/* the color of bar when mouse hover looks darker */
+.hoverBar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10%;
+    /*it is over the box*/
+    z-index: 2;
+}
+/* already progressed bar */
+.progressedBar{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #be3200;
+    border-radius: 20%;
+    /*it is under hover bar*/
+    z-index: 1;
+    width: 0;
+    /* make the Moving process smooth */
+    transition: width 0.3s ease;
+}
+/*the case of player looks*/
+.playerCase{
+    position: relative;
+    height: 100%;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 30px 80px #656565;
+    z-index: 2;
+}
+/* the album cover looks */
+.albumCover{
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: 40px;
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+/* mid circle of cover */
+.albumCover::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #b63b3b;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 50%;
+    margin: -10px auto auto auto;
+    box-shadow: inset 0 0 0 2px #000000;
+    z-index: 1;
+}
+/* the cover when active */
+.albumCover.active{
+    top: -60px;
+    box-shadow: 0 0 0 4px #000000,
+    0 30px 50px -15px #afb7c1;
+}
+.albumCover img{
+    display: block;
+    width: 100%;
+    height: 0%;
+    object-fit: cover;
+    opacity: 0;
+}
+.albumCover img.active{
+    height: 100%;
+    opacity: 1;
+}
+/* the rotate of cover when playing */
+.albumCover.active img.active{
+    /* the animation, 5s once, infinite*/
+    animation: rotateCover 5s linear infinite;
+}
+/* animation of roate */
+@keyframes rotateCover {
+    0%{
+        transform: rotateZ(0);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+/* the controls looks */
+.playControls{
+    width: 255px;
+    height: 100%;
+    float: right;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-right: 2px;
+}
+.control{
+    flex: 1;
+}
+.control .button{
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.control .button i{
+    color: #d6dee6;
+    font-size: 30px;
+    transition: 0.5s ease;
+}
+.control .button:hover{
+    background: #d6d6de;
+}
+.control .button:hover i{
+    color: white;
+}
