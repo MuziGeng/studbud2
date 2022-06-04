@@ -60,6 +60,7 @@ body{
   #cent{
     border:10px solid #999;
     position:fixed;
+    background: #f0f4ff;
       top:5vh;
       right:10vw;
     margin: 10% 25%;
@@ -82,29 +83,64 @@ body{
       top:10vh;
       left:20vw;
   }
-  
+  #taskList{
+    position:fixed;
+    top:20vh;
+    left:20vw;  
+  }
+  /*li is the the relative position of data*/
   li{
     float:left;
-    width: 45%;
     list-style:none;
     margin-bottom: 20px;
     margin-left: 20px;
-    border: orange solid 2px;
-    background: #ff5050;
+    border: 0px;
+    border-radius: 15px;
+    position: relative;
+    height: 130px;
+    width: 30vw;
+    color: black;
   }
-  #taskList{
-    position:fixed;
-      top:20vh;
-      left:20vw;
-  
-  }
-  
+  /*others are absolute with li*/
   taskName{
-    color: red;
-    font-size: 50px;
+    position:absolute;
+    top: 3%;
+    left: 3%;   
+    font-size: 20px;
+    font-weight: bolder;
   }
-  
-  
+  taskDueDate{
+    position:absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  taskWeight{
+    position:absolute;
+    top: 3%;
+    left: 40%;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  taskDays{
+    position:absolute;
+    top: 30%;
+    left: 3%;
+    font-size: 20px;
+  }
+  taskTime{
+    position:absolute;
+    top: 50%;
+    left: 3%;
+    font-size: 20px;
+  }
+  delbtn{
+    position:absolute;
+    top: 80%;
+    left: 45%;
+    font-size: 20px;
+  }
   /*button of submit */
   delBtn{
     background: #3674ff;
@@ -119,12 +155,54 @@ body{
     transition: 1s ease;
     cursor: pointer;
   }
+  #linkform{
+    position:absolute;
+    top:80%;
+  }
 /*Adaptation when screen on phone*/
 @media  (max-width: 450px) {
   #menu{
     width: 20vw;
   }  
   li{
-      width: 70%;
+      width: 60vw;
     }
+    taskName{
+    position:absolute;
+    top: 3%;
+    left: 3%;   
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  taskDueDate{
+    position:absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  taskWeight{
+    position:absolute;
+    top: 20%;
+    left: 3%;
+    font-size: 10px;
+    font-weight: bolder;
+  }
+  taskDays{
+    position:absolute;
+    top: 40%;
+    left: 3%;
+    font-size: 10px;
+  }
+  taskTime{
+    position:absolute;
+    top: 60%;
+    left: 3%;
+    font-size: 10px;
+  }
+  #linkform{
+    position:absolute;
+    left: 25%;
+    top:80%;
+  }
   }

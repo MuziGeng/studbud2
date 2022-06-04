@@ -33,16 +33,28 @@
         <label for="weight">Weight:</label>
         <input type="number" name="weight" id="weightInput">
         <br>
+
+        <label for="days">Days remaining:</label>
+        <input type="number" name="days" id="daysRemaining">
+  
+        <br>
         <!--time input -->
         <label for="completionTime">Estimated Completion Time:</label>
         <input type="time" name="completionTime" id="completionTime">
         <br>
-        <button type = "submit" id = "submitBtn">Submit</button>
+        <button onclick="linkA()" type = "submit" id = "submitBtn">Submit</button>
     </form>
-   </div></center>
+   </div></center> 
    <!--the task list for a id named "taskList"-->
-   <div id="taskList">
-    </div>
+   <div id="taskList"></div>
+
+   <div id = "linkform">
+    <label for="link">Link:</label>
+    <input type="text" name="text" id="linkInput">
+    <button  type = "button" id = "linkBtn">Submit</button>
+  </div>
+  <div id="linkList"></div>
+
   <script type="module" src="js/script.js"></script>
 </body>
 
