@@ -1,0 +1,238 @@
+/*same*/
+*{
+    font-family:fantasy;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    background: #f0f4ff;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+}
+#menu{
+    background: #1e2b58;
+    position:fixed;
+    width: 5vw;
+    height: 100vh;
+    left: 0px;
+    z-index: 10;
+}
+.title{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+/*the time showing*/
+#showtime{
+  font-size: 100px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 130px;
+  width: 500px;
+  border-radius: 50px;
+  background: #d9d9d9;
+}
+/*all button*/
+button{
+  background: #d9d9d9;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*all button hover*/
+button:hover{
+    transition: 0.5s ease;
+    background: #ffffff;
+}
+/*all button active*/
+button:active{
+    transition: 0.5s ease;
+    background: #d9d9d9;
+}
+/*all button y position*/
+.buttons{
+    position: absolute;
+    top: 35%;
+    font-size: 40px;
+}
+/*start button position*/
+#startButton{
+    left:20%;
+}
+/*Interrupted button position*/
+#inButton{
+    height: 70px;
+    width: 70px;
+    border: 0px;
+    background: #c45733;
+    top: 38%;
+    left:47%;
+}
+/*Interrupted button have differnt color with others*/
+#inButton:hover{
+    transition: 0.5s ease;
+    background: #e17e5d;
+}
+#inButton:active{
+    transition: 0.5s ease;
+    background: #c45733;
+}
+/*finish button position*/
+#finishButton{
+    right:20%;
+}
+/*all title name y position*/
+.titles{
+    position: absolute;
+    top: 60%
+}
+/*Interrupted Time name position*/
+#startTime{
+  left:20%;
+}
+/*start Time name position*/
+#inTimes{
+  left:47%;
+}
+/*finish Time name position*/
+#finishTime{
+  right:20%;
+}
+/*all output y position*/
+.output{
+  position: absolute;
+  top:75%;
+}
+/*start time position*/
+#startTimeInput{
+   left:21%;
+}
+/*Interrupted time position*/
+#interruptedTimes{
+  left: 51%;
+}
+/*start time position*/
+#finishTimeInput{
+  right:21%;
+}
+/*the first line */
+#line{
+    position: absolute;
+  top: 55%;
+  height: 10px;
+  width: 80vw;
+    border-radius: 30px;
+  background: black;
+}
+/*the second line */
+#line1{
+    position: absolute;
+  top: 70%;
+  height: 5px;
+  width: 65vw;
+    border-radius: 30px;
+  background: rgba(0,0,0,0.5);
+}
+/*Adaptation when screen on phone*/
+@media  (max-width: 450px) {
+#menu{
+      width: 20vw;
+}  
+*{
+    font-size: 10px;
+}
+#showtime{
+    font-size: 60px;
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    height: 80px;
+    width: 300px;
+    border-radius: 50px;
+    background: #d9d9d9;
+  }
+  button{
+    background: #d9d9d9;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  button:hover{
+    transition: 0.5s ease;
+    background: #ffffff;
+}
+button:active{
+    background: #d9d9d9;
+}
+  .buttons{
+    position: absolute;
+    top: 35%;
+    font-size: 15px;
+  }
+  #startButton{
+    left:30%;
+  }
+  #inButton{
+    height: 30px;
+    width: 30px;
+    border: 0px;
+    background: #c45733;
+    top: 37%;
+    left:57%;
+  }
+  #finishButton{
+    right:12%;
+  }
+  .titles{
+    position: absolute;
+    top: 60%
+  }
+  #startTime{
+    left:30%;
+  }
+  #inTimes{
+    left:51%;
+  }
+  #finishTime{
+    right:12%;
+  }
+  .output{
+    position: absolute;
+    top:75%;
+  }
+  #startTimeInput{
+     left:31%;
+  }
+  #interruptedTimes{
+    left: 59%;
+  }
+  #finishTimeInput{
+    right:14%;
+  }
+  #line{
+    position: absolute;
+    top: 55%;
+    left: 20%;
+    height: 10px;
+    width: 80vw;
+      border-radius: 30px;
+    background: black;
+  }
+  #line1{
+      position: absolute;
+    top: 70%;
+    left: 30%;
+    height: 5px;
+    width: 65vw;
+      border-radius: 30px;
+    background: rgba(0,0,0,0.5);
+  }
+}

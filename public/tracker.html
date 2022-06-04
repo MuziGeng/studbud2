@@ -5,21 +5,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>replit</title>
-  <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+  <link href="styles/tracker.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
+<body onload="time()">
 <!--the menu part-->
 <div id="menu">
-    <div class="title">
-    <center><a href="index.html"><img src="img/logo.png"  width="100%"></a>
-    <a href="tracker.html"><img src="img/task.png"  width="100%"></a>
-    <a href="clock.html"><img src="img/time.png"  width="100%"></a>
-    <a href="music.html"><img src="img/music.png"  width="100%"></a></center>
-  </div>
+    <div class="title"><a href="index.html"><img src="img/logo.png"  width="100%"></a></div>
+    <div class="title"><a href="tracker.html"><img src="img/task.png"  width="100%"></a></div>
+    <div class="title"><a href="clock.html"><img src="img/time.png"  width="100%"></a></div>
+    <div class="title"><a href="music.html"><img src="img/music.png"  width="100%"></a></div>
 </div>
-
-  <script src="js/script.js"></script>
+<center><a id="showtime"></a></center>
+<button onclick="start()" class = "buttons" id = "startButton">START</button>
+<button onclick="add()" class = "buttons"id = "inButton">+</button>
+<button onclick="finish()"class = "buttons" id = "finishButton">FINISH</button>
+<div id = "line"></div>
+  <a class="titles" id = "startTime">Start Time</a>
+  <a class="titles" id = "inTimes">Interrupted</a>
+  <a class="titles" id = "finishTime">Finish Time</a>
+<div id = "line1"></div>
+<a type="text" class = "output" id="startTimeInput" /></a>
+<a type="text" class = "output" id="interruptedTimes" value="0"/></a>  
+<a type="text" class = "output" id="finishTimeInput" /></a>
+  <script src="js/track.js"></script>
 </body>
 
 </html>

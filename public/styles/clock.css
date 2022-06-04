@@ -1,0 +1,145 @@
+/*same*/
+*{
+    font-family:fantasy;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    background: #f0f4ff;
+    justify-content: center;
+    align-items: center;
+}
+#menu{
+    background: #1e2b58;
+    position:fixed;
+    width: 5vw;
+    height: 100vh;
+    left: 0px;
+    z-index: 10;
+}
+.title{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+/*the style of input box*/
+input{
+    height: 150px;
+    border-radius: 500px;
+    background: #d9d9d9;
+  }
+/*the style of time showing*/
+#timer {
+    font-size: 100px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    /*let the number showing in center*/
+    text-align:center;
+    transform: translate(-50%, -55%);
+}
+/*the style of buttons*/
+button {
+    width: 200px;
+    height: 80px;
+    border-radius: 50px;
+    background: #c45733;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+/*hover and active change color make the click action looks smooth*/
+button:hover{
+    transition: 0.5s ease;
+    background: #a14f33;
+}
+button:active{
+    transition: 0.5s ease;
+    background: #c45733;
+}
+/*the style of start/stop*/
+#pause {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  font-size: 50px;
+}
+/*the style of reset*/
+#reset {
+    position: absolute;
+    top: 60%;
+    right: 30%;
+  font-size: 50px;
+}
+/*Adaptation when screen width less than 1000*/
+@media  (max-width: 1000px) {
+    input{
+    height: 100px;
+    width: 400px;
+    border-radius: 500px;
+    background: #d9d9d9;
+    }
+    button {
+        width: 100px;
+        height: 40px;
+        border-radius: 50px;
+        background: #c45733;
+        color: white;
+        cursor: pointer;
+        outline: none;
+    }
+    #pause {
+    font-size: 30px;
+    }
+    #reset {
+    font-size: 30px;
+    }
+  
+}
+/*Adaptation when screen on phone*/
+@media  (max-width: 450px) {
+    #menu{
+      width: 20vw;
+    }  
+input{
+    height: 150px;
+    width: 300px;
+    border-radius: 50px;
+    background: #d9d9d9;
+  }
+#timer {
+    font-size: 70px;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    /*let the number showing in center*/
+    text-align:center;
+    transform: translate(-50%, -55%);
+}
+/*the style of buttons*/
+button {
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    background: #c45733;
+    color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+/*the style of start/stop*/
+#pause {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  font-size: 20px;
+}
+/*the style of reset*/
+#reset {
+    position: absolute;
+    top: 60%;
+    right: 15%;
+  font-size: 20px;
+}
+    }
