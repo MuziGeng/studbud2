@@ -14,9 +14,9 @@ let playPrev=document.querySelector('.play-prev');
 let playNext=document.querySelector('.play-next');
 
 // name of music
-let musicArray=['红模仿','感官先生','夜曲','我的名字','本草纲目'];
+let musicArray=['Are You Lost','月光の雲海','I Need You','The Way I With You','We Never Met','夏の夜'];
 // name of singer and album
-let otherArray=['周杰伦 - 红模仿','刘凤瑶 - 感官先生','周杰伦 - 夜曲','焦迈奇 - 我的名字','周杰伦 - 本草纲目'];
+let otherArray=['pink bird - ARE','Joe Hisaishi - 天空の城','Actium - I Need You','ALisa - For You','Ghost - Jourmey','Huang - 夏の夜'];
 
 // Initial value
 function initPlayer(){
@@ -195,22 +195,38 @@ function selectTrack(flag){
         // other detail of the song playing
         let playingOther=otherArray[nowIndex];
         // Setup the audio path
-        audio.src='/music/'+playingMusic+'.mp3';
+        if(playingMusic == "Are You Lost") {
+            audio.src = new URL('../music/areYouLost.mp3', import.meta.url);
+            }
+            else if (playingMusic == "月光の雲海") {
+            audio.src = new URL('../music/tianKong.mp3', import.meta.url);
+            }
+            else if (playingMusic == "I Need You") {
+                audio.src = new URL('../music/iNeedYou.mp3', import.meta.url);
+                }
+            else if (playingMusic == "The Way I With You") {
+            audio.src = new URL('../music/theWay.mp3', import.meta.url);
+            }
+            else if (playingMusic == "We Never Met") {
+                audio.src = new URL('../music/weNeverMet.mp3', import.meta.url);
+                }
+            else if (playingMusic == "夏の夜") {
+            audio.src = new URL('../music/xiaYe.mp3', import.meta.url);
+            }    
         if(flag!=0){
             // auto play when click next/prev song
             audio.play();
             playerTrack.classList.add('active');
             albumCover.classList.add('active');
         }
-        // setup song name
+        // write song name
         musicName.innerText=playingMusic;
-        // setuo other info
+        // write other info
         otherName.innerText=playingOther;
         // setup cover
-      albumCover.querySelector('.active').classList.remove('active');
+        albumCover.querySelector('.active').classList.remove('active');
         albumCover.getElementsByTagName('img')[nowIndex].classList.add('active');
-        
-    }
+        }
 }
 
 // init

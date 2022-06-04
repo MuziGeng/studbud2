@@ -1,24 +1,10 @@
-*{
-    /* 初始化 */
-    margin: 0;
-    padding: 0;
-}
 body{
-    /* 100%窗口高度 */
     height: 100vh;
-    /* 弹性布局 居中显示 */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#menu{
-    background: #1e2b58;
-    position:fixed;
-    width: 10vw;
-    height: 100vh;
-    left: 0px;
-    z-index: 5;
-  }
+
 /*the box size*/
 .frameBox{
     width: 430px;
