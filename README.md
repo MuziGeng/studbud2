@@ -9,11 +9,11 @@
 
 It makes the page comfotable when user use it.
 
-## Task Page
+# Task Page
 ![photo](readme/comp1.PNG)
 
 ![photo](readme/a2_1.PNG)
-### Covey Quadrants
+## Covey Quadrants
 I restored the design drawing as much as possible.For the color, I used Covey Quadrants.
 * red for important and urgent
 * yellow for important not urgent
@@ -37,13 +37,13 @@ if (task.weight > 25 && task.days < 15){
       item.style.backgroundColor = '#23BDFF';
     }
 ```
-### Add Task
+## Add Task
 Users can add task, Due Date, Weight, Days remaining and Estimated Completion Time in the task board. 
 
-### Acronym Maker
+## Acronym Maker
 Click submit will have the link of Acronym Maker
 
-### Phone
+## Phone
 ![photo](readme/phone1.PNG)
 I changed the task list one in a row. It looks better.
 ```css
@@ -57,14 +57,71 @@ I changed the task list one in a row. It looks better.
     ...
 }
 ```
-## Flow Time Tracker
+# Flow Time Tracker
+![photo](readme/comp2.PNG)
+![photo](readme/a2_2.PNG)
+For the design, I changed the shape more mellow, looks more comfortable. For the time, I used hour + minute + second, I don't know how to calculation use these mode. Hence I didn't make the worktime and breaktime. 
+The form looks like
+|Start Time|Interrupted|Finish|
+| --- | --- | --- |
+| 12:15:12 | 4 | 13:25:11 |
+## Clock
+```js
+//show the real time
+function time() {
+    var realTime = new Date()
+    theTime = document.getElementById('showtime');
+    // looks like 21:22:45
+    theTime.innerHTML = realTime.getHours() + ":" + realTime.getMinutes() + ":" + realTime.getSeconds() + "";
+    setTimeout(time, 1000);
+  }
+```
+The clock I used getHours, getMinutes and getSeconds to Extract the current time separately. 
+```html
+<body onload="time()">
+```
+And used onload to Keep running the code, showing the real time.
 
-## Stopwatch Timer
+## Start/Finish Time
+```js
+  function finish(){
+    var realTime = new Date()
+    var startTimeInput = document.getElementById("finishTimeInput");
+    var realHour = realTime.getHours();
+    var realMinute = realTime.getMinutes();
+    var realSecond = realTime.getSeconds();
+    // looks like 21:22:45
+    startTimeInput.innerHTML = realHour+ ":"  + realMinute +":" +realSecond
+    }
+```
+I used same way to get the number of time. I add them in the function to make sure on click, then refresh the time.
+## Interrupted
+```js
+  function add(){
+          var  interruptedTimes=document.getElementById("interruptedTimes");
+          var  nInterruptedTimes= interruptedTimes.innerHTML;
+          nInterruptedTimes++;
+          interruptedTimes.innerHTML=nInterruptedTimes;
+      }
+```
+For the interrupted, just a simple add plus code. 
+## Phone
+![photo](readme/phone2.PNG)
+For the phone size I changed the Arrange format looks like
+
+| Text | Output  |
+| :------------ |:---------------:|
+| Start Time     | 12:15:12 |
+| Interrupted     | 4 | 
+| Finish Time     | 13:25:11 |
+
+
+# Stopwatch Timer
 ![photo](readme/comp3.PNG)
 I didn't design this page in A2, then I know we should have a stopwatch timer.
 
 The stopwatch timer has samiliar design with flow Time Timer. The point is over 9 Ten digits plus 1. 60second = 1 minute, 60minuts = 1hour.
-### stop and start
+## stop and start
 ![photo](readme/comp3_1.PNG)
 If click stop, the time will stop and button change to start. Click start the time will start and button change to stop.
 ```js
@@ -83,7 +140,7 @@ function pause(self) {
  }
 }
 ```
-### Reset
+## Reset
 click reset the time will be 00:00:00 
 ```js
 // restart
@@ -98,18 +155,18 @@ function restart() {
  ele_pause.setAttribute("state", "on");
 }
 ```
-### Phone
+## Phone
 ![photo](readme/phone3.PNG)
 I changed the size when width less than 450 (phone size)
 
-## Music Player
+# Music Player
 ![photo](readme/comp4.PNG)
 ![photo](readme/a2_3.PNG)
 It is differnt with my design. Because I find a video the music player looks much better when I make the page.
 * https://www.bilibili.com/video/BV1di4y127U2?spm_id_from=333.999.0.0/
 
 Through learning and improving, add some own elements, such as black and red in the center, seem to play on old-fashioned discs.
-### Play and Change Song
+## Play and Change Song
 ```js
   if(playingMusic == "Are You Lost") {
             audio.src = new URL('../music/areYouLost.mp3', import.meta.url);
@@ -131,3 +188,5 @@ Through learning and improving, add some own elements, such as black and red in 
             }  
 ```
 I have a array of the song name, when change to the sone name, it will url the Matching song.
+
+# That's all, thanks for reading :)

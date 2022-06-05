@@ -1,9 +1,9 @@
 //show the real time
 function time() {
     var realTime = new Date()
-    t_div = document.getElementById('showtime');
+    theTime = document.getElementById('showtime');
     // looks like 21:22:45
-    t_div.innerHTML = realTime.getHours() + ":" + realTime.getMinutes() + ":" + realTime.getSeconds() + "";
+    theTime.innerHTML = realTime.getHours() + ":" + realTime.getMinutes() + ":" + realTime.getSeconds() + "";
     setTimeout(time, 1000);
   }
   // click the start button will give the real time
